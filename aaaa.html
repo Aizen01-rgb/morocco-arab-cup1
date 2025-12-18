@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>المغرب بطل كأس العرب 2025</title>
+
+<style>
+:root{
+  --red:#c1272d;
+  --green:#006233;
+  --gold:#ffd700;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+body{
+  background:
+    radial-gradient(circle at top, var(--red), transparent 45%),
+    radial-gradient(circle at bottom, var(--green), transparent 50%),
+    #0a0a0a;
+  color:#fff;
+  text-align:center;
+  overflow-x:hidden;
+}
+
+/* ===== INTRO ===== */
+.intro{
+  padding:50px 15px 30px;
+}
+
+.intro h1{
+  font-size:28px;
+  color:var(--gold);
+  text-shadow:0 0 25px rgba(255,215,0,.8);
+}
+
+.intro p{
+  margin-top:10px;
+  font-size:17px;
+}
+
+/* ===== MATCH BOX ===== */
+.match-box{
+  max-width:560px;
+  margin:30px auto;
+  background:#000;
+  border-radius:25px;
+  padding:25px;
+  box-shadow:0 30px 80px rgba(0,0,0,.85);
+}
+
+.flags{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.flag{
+  width:120px;
+  border-radius:14px;
+  box-shadow:0 20px 40px rgba(0,0,0,.7);
+}
+
+.vs{
+  font-size:26px;
+  color:var(--gold);
+}
+
+.score{
+  font-size:46px;
+  font-weight:900;
+  margin:20px 0;
+}
+
+.score span{color:var(--gold);}
+
+.goals{
+  display:flex;
+  gap:10px;
+  margin-top:20px;
+  flex-wrap:wrap;
+}
+
+.team{
+  width:48%;
+  background:rgba(255,255,255,.08);
+  border-radius:18px;
+  padding:15px;
+}
+
+.team h3{color:var(--gold);}
+
+/* ===== LINEUPS ===== */
+.lineup{
+  max-width:560px;
+  margin:40px auto;
+  padding:25px;
+  background:#050505;
+  border-radius:25px;
+  box-shadow:0 25px 60px rgba(0,0,0,.8);
+}
+
+.lineup h2{
+  color:var(--gold);
+  margin-bottom:15px;
+}
+
+.players{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:10px;
+}
+
+.player{
+  background:rgba(255,255,255,.08);
+  padding:10px;
+  border-radius:15px;
+  box-shadow:0 10px 25px rgba(0,0,0,.6);
+}
+
+/* ===== 3D PITCH ===== */
+.pitch-title{
+  font-size:22px;
+  margin:40px 0 15px;
+  color:var(--gold);
+  text-shadow:0 0 15px rgba(255,215,0,.8);
+}
+
+.pitch3d{
+  max-width:600px;
+  height:720px;
+  margin:0 auto 50px;
+  background:
+    repeating-linear-gradient(
+      90deg,
+      #0f7a3a,
+      #0f7a3a 40px,
+      #0e6f35 40px,
+      #0e6f35 80px
+    );
+  border-radius:30px;
+  position:relative;
+  box-shadow:
+    inset 0 0 0 4px rgba(255,255,255,.4),
+    0 40px 80px rgba(0,0,0,.8);
+  transform:perspective(1000px) rotateX(12deg);
+}
+
+/* Pitch lines */
+.pitch3d:before{
+  content:"";
+  position:absolute;
+  inset:20px;
+  border:3px solid rgba(255,255,255,.6);
+  border-radius:20px;
+}
+
+.center-line{
+  position:absolute;
+  top:50%;
+  left:20px;
+  right:20px;
+  height:2px;
+  background:rgba(255,255,255,.6);
+}
+
+.center-circle{
+  position:absolute;
+  top:50%;
+  left:50%;
+  width:120px;
+  height:120px;
+  border:3px solid rgba(255,255,255,.6);
+  border-radius:50%;
+  transform:translate(-50%,-50%);
+}
+
+/* Player */
+.player-pos{
+  position:absolute;
+  background:linear-gradient(145deg,#c1272d,#8b1b1f);
+  color:#fff;
+  padding:8px 10px;
+  border-radius:14px;
+  font-size:12px;
+  font-weight:bold;
+  box-shadow:
+    0 10px 25px rgba(0,0,0,.7),
+    inset 0 0 10px rgba(255,255,255,.2);
+  transform:translate(-50%,-50%);
+  text-shadow:0 2px 4px rgba(0,0,0,.7);
+}
+
+/* 4-3-3 positions */
+.gk{top:92%; left:50%;}
+.lb{top:78%; left:20%;}
+.cb1{top:78%; left:40%;}
+.cb2{top:78%; left:60%;}
+.rb{top:78%; left:80%;}
+.cm1{top:60%; left:30%;}
+.cm2{top:60%; left:50%;}
+.cm3{top:60%; left:70%;}
+.lw{top:35%; left:25%;}
+.st{top:30%; left:50%;}
+.rw{top:35%; left:75%;}
+
+/* ===== TROPHY ===== */
+.trophy{
+  font-size:80px;
+  margin:40px 0;
+}
+
+/* ===== CONFETTI ===== */
+.confetti{
+  position:fixed;
+  top:-10px;
+  width:8px;
+  height:8px;
+  animation:fall linear infinite;
+}
+
+@keyframes fall{
+  to{transform:translateY(110vh) rotate(360deg);}
+}
+</style>
+</head>
+
+<body>
+
+<!-- INTRO -->
+<div class="intro">
+  <h1>واش عمرك شفتي سبع خايف كايتخلع؟ 🦁🔥</h1>
+  <p>المغرب بطل كأس العرب 2025 بعد الوقت الإضافي 🇲🇦</p>
+</div>
+
+<!-- MATCH -->
+<div class="match-box">
+  <div class="flags">
+    <img class="flag" src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Flag_of_Morocco.svg">
+    <div class="vs">VS</div>
+    <img class="flag" src="https://upload.wikimedia.org/wikipedia/commons/c/c0/Flag_of_Jordan.svg">
+  </div>
+
+  <div class="score"><span>3</span> - <span>2</span></div>
+
+  <div class="goals">
+    <div class="team">
+      <h3>🇲🇦 المغرب</h3>
+      ⚽ أسامة التاناني (3’)<br>
+      ⚽ عبد الرزاق حمدالله (88’)<br>
+      ⚽ عبد الرزاق حمدالله (100’)
+    </div>
+    <div class="team">
+      <h3>🇯🇴 الأردن</h3>
+      ⚽ Ali Olwan (48’)<br>
+      ⚽ Ali Olwan (67’)
+    </div>
+  </div>
+</div>
+
+<!-- LINEUP MOROCCO -->
+<div class="lineup">
+<h2>🇲🇦 تشكيلة المنتخب المغربي</h2>
+<div class="players">
+<div class="player">بونو</div><div class="player">حكيمي</div>
+<div class="player">أكرد</div><div class="player">سايس</div>
+<div class="player">مزراوي</div><div class="player">أمرابط</div>
+<div class="player">أوناحي</div><div class="player">زياش</div>
+<div class="player">بوفال</div><div class="player">حمدالله</div>
+<div class="player">النصيري</div>
+</div>
+</div>
+
+<!-- LINEUP JORDAN -->
+<div class="lineup">
+<h2>🇯🇴 تشكيلة المنتخب الأردني</h2>
+<div class="players">
+<div class="player">أبو ليلى</div><div class="player">إحسان حداد</div>
+<div class="player">عبدالله نصيب</div><div class="player">يزن العرب</div>
+<div class="player">المرضي</div><div class="player">نور الروابدة</div>
+<div class="player">شرارة</div><div class="player">رجائي عايد</div>
+<div class="player">موسى التعمري</div><div class="player">علي علوان</div>
+<div class="player">حمزة الدردور</div>
+</div>
+</div>
+
+<!-- PITCH MOROCCO -->
+<div class="pitch-title">🇲🇦 التكتيك المغربي 4-3-3</div>
+<div class="pitch3d">
+  <div class="center-line"></div>
+  <div class="center-circle"></div>
+
+  <div class="player-pos gk">بونو</div>
+  <div class="player-pos lb">مزراوي</div>
+  <div class="player-pos cb1">أكرد</div>
+  <div class="player-pos cb2">سايس</div>
+  <div class="player-pos rb">حكيمي</div>
+  <div class="player-pos cm1">أمرابط</div>
+  <div class="player-pos cm2">أوناحي</div>
+  <div class="player-pos cm3">زياش</div>
+  <div class="player-pos lw">بوفال</div>
+  <div class="player-pos st">حمدالله</div>
+  <div class="player-pos rw">النصيري</div>
+</div>
+
+<!-- PITCH JORDAN -->
+<div class="pitch-title">🇯🇴 التكتيك الأردني 4-3-3</div>
+<div class="pitch3d">
+  <div class="center-line"></div>
+  <div class="center-circle"></div>
+
+  <div class="player-pos gk">أبو ليلى</div>
+  <div class="player-pos lb">المرضي</div>
+  <div class="player-pos cb1">عبدالله نصيب</div>
+  <div class="player-pos cb2">يزن العرب</div>
+  <div class="player-pos rb">إحسان حداد</div>
+  <div class="player-pos cm1">نور الروابدة</div>
+  <div class="player-pos cm2">رجائي عايد</div>
+  <div class="player-pos cm3">شرارة</div>
+  <div class="player-pos lw">موسى التعمري</div>
+  <div class="player-pos st">علي علوان</div>
+  <div class="player-pos rw">حمزة الدردور</div>
+</div>
+
+<div class="trophy">🏆</div>
+
+<script>
+for(let i=0;i<90;i++){
+  let c=document.createElement("div");
+  c.className="confetti";
+  c.style.left=Math.random()*100+"vw";
+  c.style.animationDuration=(Math.random()*3+3)+"s";
+  c.style.background=Math.random()>0.5?"#ffd700":"#c1272d";
+  document.body.appendChild(c);
+}
+</script>
+
+
+</body></html>
